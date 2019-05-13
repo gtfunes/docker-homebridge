@@ -19,3 +19,6 @@
 # If you're running a debian based version of this container please use apt-get to install packages.
 #
 
+npm --no-update-notifier install --unsafe-perm --save homebridge-automation-chromecast homebridge-camera-ffmpeg-omx homebridge-hue homebridge-people homebridge-plex-v2 homebridge-samsung-tizen
+
+apk add --no-cache ffmpeg ffmpeg-libs
