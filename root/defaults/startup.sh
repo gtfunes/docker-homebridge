@@ -22,3 +22,5 @@
 npm --no-update-notifier install --unsafe-perm --save homebridge-automation-chromecast homebridge-camera-ffmpeg-omx homebridge-hue homebridge-people homebridge-plex-v2 homebridge-samsung-tizen
 
 apk add --no-cache ffmpeg ffmpeg-libs
+
+usermod -a -G video $(whoami)
