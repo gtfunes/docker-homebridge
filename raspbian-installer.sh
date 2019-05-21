@@ -12,9 +12,25 @@ DOCKER_VERSION=18.06 # 18.09 has issues on raspberry pi zero
 
 LP="[oznu/homebridge installer]"
 
-echo "$LP Installing Docker $DOCKER_VERSION..."
+# Step 0: Some basic configuration
+
+echo "$LP Expanding filesystem..."
+
+sudo raspi-config --expand-rootfs
+
+echo "$LP Setting up locale..."
+
+sudo sed -i "s/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g" -i /etc/locale.gen
+sudo locale-gen en_US.UTF-8
+sudo update-locale en_US.UTF-8
+
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Step 1: Install Docker
+
+echo "$LP Installing Docker $DOCKER_VERSION..."
 
 curl -fsSL https://get.docker.com -o get-docker.sh
 chmod u+x get-docker.sh
@@ -32,9 +48,9 @@ sudo apt-get -y install python-setuptools
 sudo easy_install pip
 sudo pip install docker-compose~=1.23.0
 
-echo "$LP Docker Compose Installed"
-
 # Step 3: Create Docker Compose Manifest
+
+echo "$LP Docker Compose Installed"
 
 mkdir -p $INSTALL_DIR
 cd $INSTALL_DIR
@@ -108,3 +124,8 @@ echo "$LP Password: admin"
 echo "$LP"
 echo "$LP Installed to: $INSTALL_DIR"
 echo "$LP Thanks for installing oznu/homebridge!"
+
+echo "$LP"
+echo "$LP Rebooting Pi..."
+
+sudo reboot
