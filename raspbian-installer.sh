@@ -21,7 +21,7 @@ sudo raspi-config --expand-rootfs
 echo "$LP Setting up locale..."
 
 sudo sed -i "s/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g" -i /etc/locale.gen
-sudo locale-gen en_US.UTF-8
+sudo locale-gen --purge en_US.UTF-8
 sudo update-locale en_US.UTF-8
 
 export LANGUAGE=en_US.UTF-8
