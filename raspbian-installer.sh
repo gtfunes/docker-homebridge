@@ -8,7 +8,7 @@
 set -e
 
 INSTALL_DIR=$HOME/homebridge
-DOCKER_VERSION=18.06 # 18.09 has issues on raspberry pi zero
+DOCKER_VERSION=18.09.6
 
 LP="[gtfunes/homebridge installer]"
 
