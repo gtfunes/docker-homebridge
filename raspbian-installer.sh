@@ -8,7 +8,7 @@
 set -e
 
 INSTALL_DIR=$HOME/homebridge
-DOCKER_VERSION=18.09.6
+DOCKER_VERSION=18.09
 
 LP="[gtfunes/homebridge installer]"
 
