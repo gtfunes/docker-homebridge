@@ -1,4 +1,7 @@
 {
+  "description": "Homebridge Docker",
+  "repository": "https://github.com/gtfunes/docker-homebridge",
+  "license": "MIT License",
   "dependencies": {
     "mdns": "^2.4.0",
     "homebridge-dummy": "^0.2.0",
