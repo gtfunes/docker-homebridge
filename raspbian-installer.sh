@@ -70,8 +70,8 @@ services:
     volumes:
       - ./config:/homebridge
     environment:
-      - PGID=$${PGID}
-      - PUID=$${PUID}
+      - PGID=$PGID
+      - PUID=$PUID
       - HOMEBRIDGE_CONFIG_UI=1
       - HOMEBRIDGE_CONFIG_UI_PORT=8080
 EOL
