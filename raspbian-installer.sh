@@ -64,7 +64,7 @@ cat >$INSTALL_DIR/docker-compose.yml <<EOL
 version: '2'
 services:
   homebridge:
-    image: gtfunes/homebridge:latest
+    image: gtfunes/homebridge:master
     restart: always
     network_mode: host
     volumes:
