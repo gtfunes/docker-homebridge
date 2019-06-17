@@ -64,7 +64,7 @@ cat >$INSTALL_DIR/docker-compose.yml <<EOL
 version: '2'
 services:
   homebridge:
-    image: gtfunes/homebridge:arm32v6
+    image: gtfunes/homebridge:latest
     restart: always
     network_mode: host
     volumes:
@@ -73,7 +73,7 @@ services:
       - PGID=$PGID
       - PUID=$PUID
       - HOMEBRIDGE_CONFIG_UI=1
-      - HOMEBRIDGE_CONFIG_UI_PORT=8080
+      - HOMEBRIDGE_CONFIG_UI_PORT=80
 EOL
 
 echo "$LP Created $INSTALL_DIR/docker-compose.yml"
