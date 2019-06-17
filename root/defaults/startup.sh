@@ -17,7 +17,3 @@
 #
 # If you're running a debian based version of this container please use apt-get to install packages.
 #
-
-apk add --no-cache ffmpeg ffmpeg-libs iputils
-
-usermod -aG video $(whoami)

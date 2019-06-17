@@ -1,8 +1,8 @@
 ARG S6_ARCH
-FROM oznu/s6-node:10.16.0-${S6_ARCH:-armhf}
+FROM oznu/s6-node:10.16.0-${S6_ARCH:-amd64}
 
 RUN apk add --no-cache git python make g++ avahi-compat-libdns_sd avahi-dev dbus \
-    iputils sudo nano \
+    iputils ffmpeg ffmpeg-libs sudo nano \
   && chmod 4755 /bin/ping \
   && mkdir /homebridge \
   && npm set global-style=true \
