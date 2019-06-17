@@ -64,7 +64,7 @@ cat >$INSTALL_DIR/docker-compose.yml <<EOL
 version: '2'
 services:
   homebridge:
-    image: gtfunes/homebridge:no-avahi-arm32v6
+    image: gtfunes/homebridge:no-avahi-raspberry-pi
     restart: always
     network_mode: host
     volumes:
