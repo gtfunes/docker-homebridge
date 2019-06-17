@@ -107,7 +107,7 @@ IP=$(hostname -I)
 
 echo "$LP"
 echo "$LP Homebridge Installation Complete!"
-echo "$LP You can access the Homebridge UI (gtfunes/homebridge-config-ui-x) via:"
+echo "$LP You can access the Homebridge UI via:"
 echo "$LP"
 
 for ip in $IP; do
