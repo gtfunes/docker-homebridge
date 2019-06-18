@@ -10,7 +10,7 @@
     "homebridge-camera-ffmpeg": "^0.1.11",
     "homebridge-people": "^0.6.2",
     "homebridge-plex-v2": "^1.1.7",
-    "homebridge-samsung-tizen": "^4.0.0",
+    "homebridge-samsung-tizen": "^4.0.4",
     "homebridge-winpc": "^0.3.47"
   }
 }
