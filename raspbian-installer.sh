@@ -64,7 +64,7 @@ cat >$INSTALL_DIR/docker-compose.yml <<EOL
 version: '2'
 services:
   homebridge:
-    image: gtfunes/homebridge:master
+    image: gtfunes/homebridge:latest
     restart: always
     network_mode: host
     volumes:
@@ -94,7 +94,7 @@ sudo docker-compose up -d
 
 echo "$LP Waiting for Homebridge to start..."
 
-until $(curl --output /dev/null --silent --head --fail http://localhost:8080); do
+until $(curl --output /dev/null --silent --head --fail http://localhost); do
   printf '.'
   sleep 5
 done
@@ -112,9 +112,9 @@ echo "$LP"
 
 for ip in $IP; do
   if [[ $ip =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-    echo "$LP http://$ip:8080"
+    echo "$LP http://$ip"
   else
-    echo "$LP http://[$ip]:8080"
+    echo "$LP http://[$ip]"
   fi
 done
 
