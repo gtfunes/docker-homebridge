@@ -10,7 +10,7 @@ set -e
 INSTALL_DIR=$HOME/homebridge
 DOCKER_VERSION=18.06 # 18.09 has issues on raspberry pi zero
 
-LP="[gtfunes/homebridge installer]"
+LP="[oznu/homebridge installer]"
 
 # Step 0: Some basic configuration
 
@@ -64,7 +64,7 @@ cat >$INSTALL_DIR/docker-compose.yml <<EOL
 version: '2'
 services:
   homebridge:
-    image: gtfunes/homebridge:latest
+    image: oznu/homebridge:latest
     restart: always
     network_mode: host
     volumes:
@@ -123,7 +123,7 @@ echo "$LP Username: admin"
 echo "$LP Password: admin"
 echo "$LP"
 echo "$LP Installed to: $INSTALL_DIR"
-echo "$LP Thanks for installing gtfunes/homebridge!"
+echo "$LP Thanks for installing oznu/homebridge!"
 
 echo "$LP"
 echo "$LP Rebooting Pi..."

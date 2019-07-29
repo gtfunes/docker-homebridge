@@ -1,7 +1,7 @@
 {
   "private": true,
   "description": "Homebridge Docker",
-  "repository": "https://github.com/gtfunes/docker-homebridge",
+  "repository": "https://github.com/oznu/docker-homebridge",
   "license": "MIT License",
   "dependencies": {
     "mdns": "^2.4.0",
